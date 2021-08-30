@@ -1,0 +1,158 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+ #wp-admin-bar-deactivators{
+     position: relative;
+ }
+ #deactivators_panel{
+     position: absolute;
+     max-width: 400px;
+     padding: 10px;
+     background-color: #2c3338;
+     display: none;
+ }
+ 
+.sidebtn{
+    position: absolute !important;
+    right: -6px;
+    background: #2e494e;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    height: 55px !important;
+    width: 8px !important;
+    border: 1px solid;
+    border-radius: 0 !important;
+    line-height: 50px !important;
+    cursor: pointer;
+}
+.allplugins {
+    display: flex;
+}
+
+.pluginsv.deactivated_plugins,.pluginsv.activated_plugins {
+    min-width: 200px !important;
+}
+.pluginsv.deactivated_plugins{
+    display: none;
+    padding-left: 10px !important;
+}
+div#deactivators_panel .pluginsv ul li, div#deactivators_panel .depluginsv ul li {
+    display: block;
+    width: 100%;
+}
+div#deactivators_panel label {
+    cursor: pointer !important;
+    color: #fff !important;
+    font-size: 12px !important;
+}
+.pluginsv ul {
+    max-height: 65vh;
+    overflow-y: auto;
+    list-style: none;
+}
+
+.pluginsv ul::-webkit-scrollbar {
+    width: 2px;
+}
+
+.pluginsv ul::-webkit-scrollbar-track {
+    background: #f1f1f100; 
+}
+
+.pluginsv ul::-webkit-scrollbar-thumb {
+    background: #3b444a; 
+}
+
+.pluginsv ul::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+li#wp-admin-bar-deactivators a.ab-item {
+    background: #1f3033;
+    transition: .3s;
+}
+div#deactivators_panel label.selall {
+    color: #bb6600 !important;
+}
+button#selall{
+    background: #bb6600;
+}
+span.deactivators-checkbox {
+    cursor: pointer;
+}
+div#deactivators_panel .pluginsv ul li,.selectallbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+}
+div#deactivators_panel .plnone{
+    display: none;
+}
+.deact-buttons {
+    padding-top: 15px !important;
+    display: flex;
+    gap: 5px;
+    width: 100% !important;
+}
+button.button.deactivators-start-btn,button.button.deactivators-next-btn {
+    width: 50% !important;
+    text-align: center;
+    color: #fdfdfd;
+    outline: none !important;
+    border: none !important;
+    border: 2px solid !important;
+    border-color: #767676 #212121 #212121 #767676 !important;
+    background-color: #3b444a;
+}
+button.button.deactivators-start-btn:focus,button.button.deactivators-next-btn:focus,
+button.button.deactivators-start-btn:hover,button.button.deactivators-next-btn:hover
+{
+    box-shadow: unset;
+    border: unset;
+    color: white;
+    border-color: #212121 #767676 #767676 #212121 !important;
+    background: #2b3135 !important;
+}
+
+button.deactivators-checkbox,button.selectall {
+    width: 12px !important;
+    height: 12px !important;
+    display: inline-block;
+    border: 2px solid;
+    border-color: #767676 #212121 #212121 #767676;
+    border-radius: 3px !important;
+    background-color: #3b444a;
+    cursor: pointer;
+    position: relative !important;
+}
+button.pl-active:after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #dba617;
+}
+.pl-active,.all-active{
+    border: 2px solid;
+    border-color: #212121 #767676 #767676 #212121 !important;
+    background: #2b3135 !important;
+}
+.pluginsv.deactivated_plugins ul li {
+    color: grey;
+}
+.all-active{
+    background: #8a551361 !important;
+}
+#deactivators_panel{
+    display: none;
+}
+.active_panel{
+    display: block;
+}
+button.button.deactivators-start-btn:disabled,button.button.deactivators-next-btn:disabled {
+    background: #2c3338 !important;
+    border-color: transparent !important;
+}
